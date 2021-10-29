@@ -1,0 +1,48 @@
+{
+    "created_at": "2021-10-29T02:41:13.563Z",
+    "bucket": "demo-tcsf-bucketsdocumentsd8ee291d-967z89bk1eer",
+    "s3_location": "s3://demo-tcsf-bucketsdocumentsd8ee291d-967z89bk1eer/compra_apple_iphone12pro.pdf.pdf",
+    "object": "compra_apple_iphone12pro.pdf.pdf",
+    "size": "39884",
+    "ReceiptHandle": "AQEBpUMSeYoh9dIm3/T3WXhk+1oF/y5GR6OkbnAFxSMbV2JcdsTM6bjoKEZaHwT9vHH9F0PLKF3FYrmfWRrKQ4NuF9xAO6Dthe7hElyTQTWjqskoh7FOyzUGex0LvMDcG7pJD3k+QP28NG8Mvm87b09mclvGofej3dRPior+lR4Eau0+IOJ/G3kj8pP2D2KFy+X90sE6EMChYBoZE0Ex30NuK/Y65PKfKgaF/yj/M+5npGLFI7/NCsPwmjd5n4D278gRZkh96YDLOVJGsDcZIH9AZe4D4orbA/qn0wpBNHgq4u5CS+avQwqZlbpyNwjyEFj4SPiqm1hf64VAIJkGf2Ybt/s5/FUV4RJT5qukR2O6MGRsFOpuxfZzTYgP1DILkw2sNQ1T/BxjCn2Q1a1sAliVK9qTgYD3gASNrhp6UaLx829N0ErZmVf/Ksx9hOIy6YQr",
+    "InsertedDocument": {
+        "SdkHttpMetadata": {
+            "AllHttpHeaders": {
+                "Server": [
+                    "Server"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "x-amzn-RequestId": [
+                    "51da91b6-c3e6-4fe3-9121-2e19ea1ddb8f"
+                ],
+                "x-amz-crc32": [
+                    "2745614147"
+                ],
+                "Content-Length": [
+                    "2"
+                ],
+                "Date": [
+                    "Fri, 29 Oct 2021 02:46:15 GMT"
+                ],
+                "Content-Type": [
+                    "application/x-amz-json-1.0"
+                ]
+            },
+            "HttpHeaders": {
+                "Connection": "keep-alive",
+                "Content-Length": "2",
+                "Content-Type": "application/x-amz-json-1.0",
+                "Date": "Fri, 29 Oct 2021 02:46:15 GMT",
+                "Server": "Server",
+                "x-amz-crc32": "2745614147",
+                "x-amzn-RequestId": "51da91b6-c3e6-4fe3-9121-2e19ea1ddb8f"
+            },
+            "HttpStatusCode": 200
+        },
+        "SdkResponseMetadata": {
+            "RequestId": "51da91b6-c3e6-4fe3-9121-2e19ea1ddb8f"
+        }
+    }
+}

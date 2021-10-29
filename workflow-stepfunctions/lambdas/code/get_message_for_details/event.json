@@ -1,0 +1,20 @@
+{
+    "Records": [
+        {
+            "messageId": "865161bc-c440-4cc5-948e-9908f5eb4a06",
+            "receiptHandle": "AQEB+uarJLX+XgH23XklCsC04gEnPmAKHD6vOPTTybXrTFgT7BNPv1lY+axSgq7vQbmdnkv2eaq0qvjgSvJHJV0suWw9Jbt9cfQa/CPQPgDDHAQc6fzAz9W6b4JJ9Zcj1qbrVTlHCieRMucOkQCnILDKFCT4mOa38xbFsAACPOFJFXUrcCWp0MnAoQwhne07DUt85mTthWft6EQ7Gy/1Pumj5xfOvB1y3c+oyl+zVVzl1oMDjSfLiX2Km81Jc/k/6J1FwJzV14BSvZTKyjRSsUbQsTj6meINl6zYeFoTh79Zsp7InnAib0UsTFQtb7ObZq6LahtxHNbFPfo2W/pzgkX8ussVSXAkFsHZzwfLl6M+6tzjXg2+//Gk9EBN95I6L6AnXWdD4c/PELVMUTQYRy7Y/qj7f14x/fMcL3Kg7lt+nzjTJXb+9M1Qp42UG4MLrpn+",
+            "body": "{\"Records\":[{\"eventVersion\":\"2.1\",\"eventSource\":\"aws:s3\",\"awsRegion\":\"us-east-1\",\"eventTime\":\"2021-10-29T02:09:11.975Z\",\"eventName\":\"ObjectCreated:Put\",\"userIdentity\":{\"principalId\":\"AWS:AROA5WWOPDOHY4S5LGLHP:enrique.rodriguez.garrido@gmail.com\"},\"requestParameters\":{\"sourceIPAddress\":\"201.189.142.188\"},\"responseElements\":{\"x-amz-request-id\":\"AZC0ZEETMY684H90\",\"x-amz-id-2\":\"fPmUWGSLjrC4EB7rNQ7rWxw1FR3fxr6TyUNmamFYWOvETTMQGrtX45SUgTIyas5HXY9d1R2E4lHXC4OFInt89QR5nEtHyasszCzC+YyN8eU=\"},\"s3\":{\"s3SchemaVersion\":\"1.0\",\"configurationId\":\"MzY1YThlNGYtY2I2Zi00MWVhLTgxODEtZjcxZWY0NzdmYTYx\",\"bucket\":{\"name\":\"demo-tcsf-bucketsdocumentsd8ee291d-967z89bk1eer\",\"ownerIdentity\":{\"principalId\":\"A14U1BQ59S1AOR\"},\"arn\":\"arn:aws:s3:::demo-tcsf-bucketsdocumentsd8ee291d-967z89bk1eer\"},\"object\":{\"key\":\"compra_apple_iphone12pro.pdf.pdf\",\"size\":39884,\"eTag\":\"a7047edeedbafd709b4dca74541f2fa2\",\"sequencer\":\"00617B57C7E92DB152\"}}}]}",
+            "attributes": {
+                "ApproximateReceiveCount": "1",
+                "SentTimestamp": "1635473353325",
+                "SenderId": "AIDAJHIPRHEMV73VRJEBU",
+                "ApproximateFirstReceiveTimestamp": "1635473353330"
+            },
+            "messageAttributes": {},
+            "md5OfBody": "53e0fb164c0cf1c2e8451578fab1ee7a",
+            "eventSource": "aws:sqs",
+            "eventSourceARN": "arn:aws:sqs:us-east-1:942104583055:DEMO-TCSF-procesarqueue9ED4E3A1-EZ67D711QYUG",
+            "awsRegion": "us-east-1"
+        }
+    ]
+}

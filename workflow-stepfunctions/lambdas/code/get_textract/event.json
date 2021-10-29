@@ -1,0 +1,22 @@
+{
+    "Records": [
+        {
+            "EventSource": "aws:sns",
+            "EventVersion": "1.0",
+            "EventSubscriptionArn": "arn:aws:sns:us-east-1:448716646650:AUCTIONS-INSIGHTS-transcribetopic87EA12AB-F724X3G82B0H:969b5ae3-fac9-46b7-8ef0-8b7de066bcfb",
+            "Sns": {
+                "Type": "Notification",
+                "MessageId": "ac48f5f2-068b-53eb-ba8b-ac393a175ad7",
+                "TopicArn": "arn:aws:sns:us-east-1:448716646650:AUCTIONS-INSIGHTS-transcribetopic87EA12AB-F724X3G82B0H",
+                "Subject": null,
+                "Message": "{\"JobId\":\"067c017790a3d8dec3ab73e1cc49fabadd96693e2628b29780a14db90861e317\",\"Status\":\"SUCCEEDED\",\"API\":\"StartDocumentTextDetection\",\"Timestamp\":1632713308704,\"DocumentLocation\":{\"S3ObjectName\":\"documentos/causa\\u003dC-3186-2015/fecha\\u003d2021913/hora\\u003d1430/bases.pdf\",\"S3Bucket\":\"auctions-ingest-documentsb555045c-1w87vh2535px4\"}}",
+                "Timestamp": "2021-09-27T03:28:28.746Z",
+                "SignatureVersion": "1",
+                "Signature": "b8zp/uINfe8nvSt6fCXL78dJe2QYBMdJpsJMW1jQnk/HxhWwpTrj7FAZQiWf06w8cUo2Qs/xTX/UWCoPXVOP5yvnVylnvDRyk1hQbD7gdlnVJljWx5Q/o5yGZUkqg6Bfco7VrJckbZKmXixLlRVZT3CAkqBS5pxavK2T/RIvk8GMKTBxXbQ/HMjgYlDIiiaV3hfVCDA3xF+86f6zCfnrrQNMWSvUdPnamdNoLVfpxg0vHOoEBvywNIrNH9fMFAzyFdlLDFobSoVlYlpM6IAKhOGUmPKge9kLwQVjUJ/y+w6LqQnziPlF5+Fl+JSo/7siqpyOAGmmwGwO8IfC26jgjA==",
+                "SigningCertUrl": "https://sns.us-east-1.amazonaws.com/SimpleNotificationService-7ff5318490ec183fbaddaa2a969abfda.pem",
+                "UnsubscribeUrl": "https://sns.us-east-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-east-1:448716646650:AUCTIONS-INSIGHTS-transcribetopic87EA12AB-F724X3G82B0H:969b5ae3-fac9-46b7-8ef0-8b7de066bcfb",
+                "MessageAttributes": {}
+            }
+        }
+    ]
+}

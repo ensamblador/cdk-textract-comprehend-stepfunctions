@@ -78,22 +78,34 @@ def get_nlp_features(some_text):
     }
 
 
-def update_document_text(s3_location, status,  textract_text, textract_result, nlp_entities):
+def update_document_text(s3_location, status, textract_text):
 
     update_response = ddb_table.update_item(
         Key = {'s3_location': s3_location},
-        UpdateExpression = "set textract_status = :a, textract_text = :b, textract_result = :c, nlp_entities = :d",
-        ExpressionAttributeValues={
-        ':a': status,
-        ':b': textract_text,
-        ':c': json.dumps(textract_result),
-        ':d': json.dumps(nlp_entities),
-        },
-        ReturnValues="UPDATED_NEW"
-        )
-    actualizado = update_response['Attributes']['textract_status']
-    print (f'datos actualizados:\n{actualizado}')
+        UpdateExpression = "set  textract_status = :a, textract_text = :b",
+        ExpressionAttributeValues={':a': status, ':b': textract_text})
     return update_response
+
+
+def update_document_textract(s3_location, status, textract_result):
+
+    update_response = ddb_table.update_item(
+        Key = {'s3_location': s3_location},
+        UpdateExpression = "set textract_status = :a, textract_result = :c",
+        ExpressionAttributeValues={ ':a': status, ':c': json.dumps(textract_result)}
+    )
+    
+    return update_response
+
+def update_document_entities(s3_location, nlp_entities):
+
+    update_response = ddb_table.update_item(
+        Key = {'s3_location': s3_location},
+        UpdateExpression = "set  nlp_entities = :d",
+        ExpressionAttributeValues={':d': json.dumps(nlp_entities)})
+    return update_response
+
+
 
 def get_textract_job_details(job_id):
     blocks = []
@@ -129,7 +141,9 @@ def lambda_handler(event, context):
 
     features = get_nlp_features(corpus)
 
-    update_document_text(s3_location,blocks['JobStatus'], corpus, blocks['blocks'], features['Entities'] )
+    #update_document_textract(s3_location,blocks['JobStatus'],  blocks['blocks'])
+    update_document_text(s3_location,blocks['JobStatus'], corpus)
+    update_document_entities(s3_location, features['Entities'] )
 
 
     return {

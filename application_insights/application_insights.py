@@ -20,7 +20,7 @@ class APPInsights(cdk.Construct):
         # The code that defines your stack goes here
         rg_name = f'{STACK_NAME}-RESOURCE-GROUP'
 
-        group = rg.CfnGroup(self, 'rg', name=rg_name,  
+        group = rg.CfnGroup(self, 'rg', #name=rg_name,  
         resource_query= rg.CfnGroup.ResourceQueryProperty(
              query=rg.CfnGroup.QueryProperty(
                  resource_type_filters = [

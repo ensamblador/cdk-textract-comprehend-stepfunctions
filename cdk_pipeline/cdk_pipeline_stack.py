@@ -42,7 +42,7 @@ class CdkPipelineStack(cdk.Stack):
 
         
 
-        stage = CodeApplicationStage(self, "Application")
+        stage = CodeApplicationStage(self, "TEST")
         pipeline.add_stage(stage,
             pre=[
                 pipe.ConfirmPermissionsBroadening("Check",

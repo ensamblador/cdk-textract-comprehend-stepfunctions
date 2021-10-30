@@ -102,4 +102,4 @@ class WorkflowStepfunctionsStack(cdk.Stack):
             project_lambdas.get_message_for_details
         )
 
-        app_insights = APPInsights(self,'app_insights')
+        #app_insights = APPInsights(self,'app_insights')

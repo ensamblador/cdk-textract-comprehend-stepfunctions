@@ -9,12 +9,16 @@ from aws_cdk import core as cdk
 # being updated to use `cdk`.  You may delete this import if you don't need it.
 from aws_cdk import core
 
-from workflow_stepfunctions.workflow_stepfunctions_stack import WorkflowStepfunctionsStack
+
+from cdk_pipeline.cdk_pipeline_stack import CdkPipelineStack
+#from workflow_stepfunctions.workflow_stepfunctions_stack import WorkflowStepfunctionsStack
 from project_config import TAGS, STACK_NAME
 
 
+
 app = core.App()
-WorkflowStepfunctionsStack(app, STACK_NAME.upper(),
+CdkPipelineStack(app, f'{STACK_NAME.upper()}-PIPELINE',
+#WorkflowStepfunctionsStack(app, f'{STACK_NAME.upper()}',
     # If you don't specify 'env', this stack will be environment-agnostic.
     # Account/Region-dependent features and context lookups will not work,
     # but a single synthesized template can be deployed anywhere.

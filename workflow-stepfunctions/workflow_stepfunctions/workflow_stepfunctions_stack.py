@@ -35,6 +35,7 @@ class WorkflowStepfunctionsStack(cdk.Stack):
         super().__init__(scope, construct_id, **kwargs)
 
 
+
         project_tables = DDBTables(self, 'Tables')
         project_buckets = Buckets(self, "Buckets")
         sqs_queue = SQSQueue(self, 'procesar', 60)
@@ -99,3 +100,5 @@ class WorkflowStepfunctionsStack(cdk.Stack):
         step_function.workflow.grant_start_execution(
             project_lambdas.get_message_for_details
         )
+
+

@@ -58,7 +58,7 @@ class InsightsStateMachine(cdk.Construct):
             lambda_function = project_lambdas.get_textract,
             result_path='$.TextractResult')
 
-        success_state = step_fn.Succeed(self, 'OK documento')
+        success_state = step_fn.Succeed(self, 'OK documento Vamos')
         failed_state  = step_fn.Fail(self, 'Fallamos')
         
         wait_for_it = step_fn.Wait(self, "espera 10 segundos", time=step_fn.WaitTime.duration(cdk.Duration.seconds(10)))

@@ -8,7 +8,11 @@ La orquestación del proceso de extracción y entendimiento del texto se realiza
 
 Para desplegarlo en aws 
 
-`git clone https://github.com/ensamblador/cdk-textract-comprehend-stepfunctions.git`
+```bash
+
+git clone https://github.com/ensamblador/cdk-textract-comprehend-stepfunctions.git
+cd cdk-textract-comprehend-stepfunctions
+```
 
 y luego siga las instrucciones más abajo.
 

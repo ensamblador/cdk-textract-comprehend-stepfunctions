@@ -6,3 +6,6 @@ aws-cdk.aws_events_targets
 aws-cdk.aws_lambda_event_sources
 aws-cdk.aws_stepfunctions_tasks
 aws-cdk.pipelines
+aws-cdk.aws_resourcegroups
+aws-cdk.aws_applicationinsights
+aws-cdk.aws_codepipeline_actions

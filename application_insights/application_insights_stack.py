@@ -9,13 +9,8 @@ from aws_cdk import (
 # being updated to use `cdk`.  You may delete this import if you don't need it.
 from aws_cdk import core
 
-INSIGHTS_STACK_NAME = 'DEMO-TCSF-INSIGHTS'
+from project_config import TAGS, STACK_NAME
 
-TAGS =  {
-    "APPLICATION": "DEMO-TCSF",
-    "ENVIRONMENT": "DEV",
-    "GROUP": "DEMOS"
-}
 
 class ApplicationInsightsStack(cdk.Stack):
 
@@ -23,7 +18,7 @@ class ApplicationInsightsStack(cdk.Stack):
         super().__init__(scope, construct_id, **kwargs)
 
         # The code that defines your stack goes here
-        rg_name = f'{INSIGHTS_STACK_NAME}-RG'
+        rg_name = f'{STACK_NAME}-RESOURCE-GROUP'
 
         group = rg.CfnGroup(self, 'rg', name=rg_name,  
         resource_query= rg.CfnGroup.ResourceQueryProperty(

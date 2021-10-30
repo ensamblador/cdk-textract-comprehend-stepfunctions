@@ -8,6 +8,14 @@ from  aws_cdk import (
 
 STACK_NAME = 'DEMO-TCSF'
 INSIGHTS_STACK_NAME = 'DEMO-TCSF-INSIGHTS'
+EMAIL = 'enrique.rodriguez.garrido@gmail.com'
+OWNER_REPO = 'ensamblador/cdk-textract-comprehend-stepfunctions'
+REPO_BRANCH = 'main'
+
+# ! Crear previamente la conexión a github en codestar
+# # ** https://docs.aws.amazon.com/cdk/api/latest/python/aws_cdk.pipelines/README.html#github-github-enterprise-bitbucket-using-a-connection
+
+CONNECTION_ARN = 'arn:aws:codestar-connections:us-east-1:942104583055:connection/a1d4303b-918c-4ec9-ab6f-88d8590de494'
 
 TAGS =  {
     "APPLICATION": "DEMO-TCSF",

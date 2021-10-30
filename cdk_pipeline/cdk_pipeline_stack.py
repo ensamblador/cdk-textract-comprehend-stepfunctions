@@ -36,7 +36,7 @@ class CdkPipelineStack(cdk.Stack):
                             #descomenta si es un subdirectorio por ejemplo workflow-stepfunctions
                             #    "cd workflow-stepfunctions",
                                 "python -m pip install -r requirements.txt", 
-                                f"cdk synth {STACK_NAME.upper()}"]
+                                "cdk synth"]
                         )
                     )
 

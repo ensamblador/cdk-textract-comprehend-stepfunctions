@@ -11,7 +11,6 @@ from aws_cdk import core
 
 
 from cdk_pipeline.cdk_pipeline_stack import CdkPipelineStack
-from application_insights.application_insights_stack import ApplicationInsightsStack
 from workflow_stepfunctions.workflow_stepfunctions_stack import WorkflowStepfunctionsStack
 from project_config import TAGS, STACK_NAME
 
@@ -24,8 +23,8 @@ from project_config import TAGS, STACK_NAME
 
 
 app = core.App()
-#cdk_pipeline_stack = CdkPipelineStack(app, f'{STACK_NAME.upper()}-PIPELINE',
-workflow_stack = WorkflowStepfunctionsStack(app, f'{STACK_NAME.upper()}',
+cdk_pipeline_stack = CdkPipelineStack(app, f'{STACK_NAME.upper()}-PIPELINE',
+#workflow_stack = WorkflowStepfunctionsStack(app, f'{STACK_NAME.upper()}',
     # If you don't specify 'env', this stack will be environment-agnostic.
     # Account/Region-dependent features and context lookups will not work,
     # but a single synthesized template can be deployed anywhere.
@@ -42,14 +41,6 @@ workflow_stack = WorkflowStepfunctionsStack(app, f'{STACK_NAME.upper()}',
 
     # For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
     )
-
-
-# **  Si quiere instrumentar la aplicación:
-# **  Consolida las métricas de de los distintos servicios (Lambda, SNS, SQS, DynamoDB, S3, etc...)
-# **  Decomente la siguiente línea y desplegar este stack con cdk deploy `stack-name`
-
-app_insights_stack = ApplicationInsightsStack(app, f'{STACK_NAME.upper()}-INSIGHTS')
-app_insights_stack.add_dependency(workflow_stack)
 
 
 if TAGS.keys():

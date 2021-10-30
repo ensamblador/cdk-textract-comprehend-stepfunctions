@@ -27,6 +27,7 @@ from databases.databases import DDBTables
 from buckets.buckets import Buckets
 from sqs.sqs import SQSQueue
 from step_functions.document_insights import InsightsStateMachine
+from application_insights.application_insights import APPInsights
 
 
 class WorkflowStepfunctionsStack(cdk.Stack):
@@ -101,4 +102,4 @@ class WorkflowStepfunctionsStack(cdk.Stack):
             project_lambdas.get_message_for_details
         )
 
-
+        app_insights = APPInsights(self,'app_insights')

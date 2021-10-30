@@ -12,7 +12,7 @@ from aws_cdk import core
 from project_config import TAGS, STACK_NAME
 
 
-class ApplicationInsightsStack(cdk.Stack):
+class APPInsights(cdk.Construct):
 
     def __init__(self, scope: cdk.Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)

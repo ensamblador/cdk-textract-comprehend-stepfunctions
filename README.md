@@ -6,7 +6,11 @@ Este proyecto CDK consiste en desplegar una aplicación capaz de extraer el text
 La orquestación del proceso de extracción y entendimiento del texto se realiza con de un Workflow de Step Functions.
 
 
-Para desplegarlo en aws siga las instrucciones más abajo.
+Para desplegarlo en aws 
+
+`git clone https://github.com/ensamblador/cdk-textract-comprehend-stepfunctions.git`
+
+y luego siga las instrucciones más abajo.
 
 
 ![](diagrama.jpg)

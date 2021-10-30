@@ -76,6 +76,10 @@ class WorkflowStepfunctionsStack(cdk.Stack):
             project_buckets.textract_bucket.bucket_arn+'/*']))
 
         project_lambdas.get_textract.add_to_role_policy(
+            iam.PolicyStatement(actions=["rds:*"],
+            resources=['*']))
+
+        project_lambdas.get_textract.add_to_role_policy(
             iam.PolicyStatement(actions=["Comprehend:*"], resources=['*']))
 
 

@@ -1,6 +1,16 @@
 
 # cdk-textract-comprehend-stepfunctions
 
+Este proyecto CDK consiste en desplegar una aplicación capaz de extraer el texto de un archivo pdf o Imagen. Luego y entender su este texto para guardarlo en una base de datos.
+
+La orquestación del proceso de extracción y entendimiento del texto se realiza con de un Workflow de Step Functions.
+
+
+Para desplegarlo en aws siga las instrucciones más abajo.
+
+
+![](diagrama.jpg)
+
 # Welcome to your CDK Python project!
 
 This is a blank project for Python development with CDK.

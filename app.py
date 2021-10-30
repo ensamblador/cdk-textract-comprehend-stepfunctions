@@ -17,10 +17,10 @@ from project_config import TAGS, STACK_NAME
 
 
 
-# **  Si quiere agregar el ci/cd pipeline para el manejo de esta aplicación
+# **  Si quiere agregar o modificar el ci/cd pipeline para el manejo de esta aplicación
 # **  Primero lea completamente https://docs.aws.amazon.com/cdk/api/latest/python/aws_cdk.pipelines/README.html
 # **  comente `WorkflowStepfunctionsStack(app, f'{STACK_NAME.upper()}',` y 
-# **  descomente `CdkPipelineStack(app, f'{STACK_NAME.upper()}-PIPELINE',`
+# **  descomente `CdkPipelineStack(app, f'{STACK_NAME.upper()}-PIPELINE',` para desplegar el pipeline de CI/CD
 
 
 app = core.App()
@@ -50,7 +50,6 @@ workflow_stack = WorkflowStepfunctionsStack(app, f'{STACK_NAME.upper()}',
 
 app_insights_stack = ApplicationInsightsStack(app, f'{STACK_NAME.upper()}-INSIGHTS')
 app_insights_stack.add_dependency(workflow_stack)
-#app_insights_stack.add_dependency(cdk_pipeline_stack)
 
 
 if TAGS.keys():

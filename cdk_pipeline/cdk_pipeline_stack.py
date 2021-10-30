@@ -39,11 +39,21 @@ class CdkPipelineStack(cdk.Stack):
                                 f"cdk synth {STACK_NAME.upper()}"]
                         )
                     )
-        pipeline.add_stage(CodeApplication(self, ))
 
+        
 
-class CodeApplication(cdk.Stage):
+        stage = CodeApplicationStage(self, "Application")
+        pipeline.add_stage(stage,
+            pre=[
+                pipe.ConfirmPermissionsBroadening("Check",
+                    stage=stage,
+                    notification_topic=topic
+                )
+            ]
+        )
+
+class CodeApplicationStage(cdk.Stage):
     def __init__(self, scope, id, *, env=None, outdir=None):
         super().__init__(scope, id, env=env, outdir=outdir)
 
-        WorkflowStepfunctionsStack(self, f'{STACK_NAME.upper()}-TEST')
+        WorkflowStepfunctionsStack(self, f'{STACK_NAME.upper()}')
